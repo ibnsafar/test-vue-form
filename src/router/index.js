@@ -3,17 +3,9 @@ import Form from "@/pages/Form";
 import Preview from "@/pages/Preview";
 
 const routes = [
-    {
-        path: "/",
-        name: "Форма",
-        component: Form,
-    },
-    {
-        path: "/preview",
-        name: "Превью",
-        component: Preview,
-    },
-];
+    {name: "form", path: '/', component: Form, props: true},
+    {name: "preview", path: '/preview', component: Preview, props: true},
+]
 
 const router = createRouter({
     history: createWebHistory(),

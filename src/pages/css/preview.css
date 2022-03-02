@@ -1,0 +1,39 @@
+.pre-container {
+    width: 616px;
+    margin: 30px auto auto;
+}
+
+.per-person {
+    font-style: normal;
+    color: #111111;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.pre-info {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111111;
+}
+
+.pre-baby {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.pre-babies p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    background: #F1F1F1;
+    border-radius: 5px;
+    width: 176px;
+    height: 44px;
+}

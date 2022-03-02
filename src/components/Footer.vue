@@ -19,8 +19,4 @@ export default {
   text-align: center;
   background: #FAFAFA;
 }
-
-.p-foot {
-
-}
 </style>

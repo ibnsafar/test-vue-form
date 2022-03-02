@@ -2,8 +2,7 @@
   <div class="container">
     <Header/>
     <div class="content-form">
-      <form
-      >
+      <form>
         <div class="form-personal-info">
           <p class="vue-form-p">Персональные данные</p>
           <!--inputs-->
@@ -18,7 +17,8 @@
                  name="age"
                  placeholder="Возраст"
                  min="0"
-                 type="text">
+                 v-model="age"
+                 type="number">
         </div>
         <div class="head-wrapper">
           <p class="vue-form-p">Дети (макс. 5)</p>
@@ -32,8 +32,10 @@
           <input class="form-vue form-vue2 form-content-input "
                  required
                  placeholder="Имя"
+                 v-model="baby.name"
                  type="text">
-          <input class="form-vue form-vue2 form-content-input  form-content-input2"
+          <input class="form-vue form-vue2 form-content-input
+                        form-content-input2"
                  required
                  placeholder="Возраст"
                  v-model="baby.age"
@@ -48,6 +50,7 @@
       </form>
       <button type="submit"
               class="form-save-info"
+              @click="saveData"
       >Сохранить
       </button>
     </div>
@@ -64,14 +67,15 @@ export default {
   name: 'Form',
   data() {
     return {
-      name: "",
+      name: '',
       age: '',
       babies: [{id: 1, name: "", age: ''}],
       information: {
         name: this.name,
         age: this.age,
         babies: this.babies
-      }
+      },
+      res: []
     }
   },
   components: {
@@ -103,6 +107,22 @@ export default {
         }
       }
     },
+    saveData: function () {
+      for (let i = 0; i < this.babies.length; i++) {
+        console.log(this.name)
+        console.log(this.age)
+        console.log(this.babies[i].name)
+        console.log(this.babies[i].age)
+        if (this.babies[i].name === ''
+            || this.babies[i].age === '') {
+          this.res.push(false)
+        }
+      }
+      if (this.name !== '' && this.age !== ''
+          && this.res.length === 0) {
+        this.$router.push({path: '/preview'});
+      }
+    }
   }
 }
 </script>
