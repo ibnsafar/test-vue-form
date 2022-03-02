@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>hello</h1>
+  <div class="container-foot">
+    <p class="p-foot">all rights reserved</p>
   </div>
 </template>
 
@@ -10,6 +10,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.container-foot {
+  position: fixed;
+  bottom: 0;
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  background: #FAFAFA;
+}
 
+.p-foot {
+
+}
 </style>
