@@ -55,6 +55,9 @@
       </button>
     </div>
     <Footer/>
+    <Preview
+             class="form-displaying"/>
+<!--    can't resolve this :names="this.name" :msg="this.babies"-->
   </div>
 </template>
 
@@ -62,6 +65,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./css/form.css";
+import Preview from "@/pages/Preview";
 
 export default {
   name: 'Form',
@@ -79,6 +83,7 @@ export default {
     }
   },
   components: {
+    Preview,
     Header,
     Footer
   },
@@ -109,17 +114,13 @@ export default {
     },
     saveData: function () {
       for (let i = 0; i < this.babies.length; i++) {
-        console.log(this.name)
-        console.log(this.age)
-        console.log(this.babies[i].name)
-        console.log(this.babies[i].age)
-        if (this.babies[i].name === ''
-            || this.babies[i].age === '') {
+        if (this.babies[i].name === '' || this.babies[i].age === '') {
           this.res.push(false)
         }
       }
       if (this.name !== '' && this.age !== ''
           && this.res.length === 0) {
+        console.log(this.information)
         this.$router.push({path: '/preview'});
       }
     }

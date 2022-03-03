@@ -3,8 +3,8 @@ import Form from "@/pages/Form";
 import Preview from "@/pages/Preview";
 
 const routes = [
-    {name: "form", path: '/', component: Form, props: true},
-    {name: "preview", path: '/preview', component: Preview, props: true},
+    {path: '/', component: Form},
+    {path: '/preview', component: Preview}
 ]
 
 const router = createRouter({

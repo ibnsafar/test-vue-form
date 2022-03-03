@@ -84,3 +84,7 @@ input:focus {
     border-radius: 4px;
     outline: 1px solid #F1F1F1;
 }
+
+.form-displaying {
+    display: none;
+}

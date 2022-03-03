@@ -7,6 +7,7 @@
       <p class="pre-baby">Дети</p>
       <div class="pre-babies">
         <p>Петр, 10 лет</p>
+<!--        <h1>{{names}}</h1>-->
       </div>
     </div>
     <Footer/>
@@ -20,8 +21,12 @@ import "./css/preview.css";
 
 export default {
   name: "Preview",
-  components: {Footer, Header}
+  components: {Footer, Header},
+  // props: {
+  //   names: String
+  // }
 }
+console.log()
 </script>
 
 <style>
